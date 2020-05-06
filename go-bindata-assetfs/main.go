@@ -86,6 +86,7 @@ func main() {
 			return
 		}
 		if !done && !isPrefix && bytes.HasPrefix(line, []byte("import (")) {
+      fmt.Fprintln(out, "\t\"os\"") 
 			if debug {
 				fmt.Fprintln(out, "\t\"net/http\"")
 			} else {
